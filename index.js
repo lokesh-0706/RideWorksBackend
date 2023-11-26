@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const adminRouter = require("./routes/admin");
 const userRouter = require("./routes/user");
+const PORT = process.env.PORT || 6010;
 
 const app = express();
 
@@ -18,4 +19,4 @@ mongoose.connect(
   { dbName: "rides" }
 );
 
-app.listen(3000, () => console.log("Server running on port 3000"));
+app.listen(PORT, () => console.log("Server running on port 3000"));
